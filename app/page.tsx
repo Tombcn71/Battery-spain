@@ -1,65 +1,130 @@
-import Image from "next/image";
+import { FiClock, FiShoppingCart } from "react-icons/fi";
+import { Zap } from "lucide-react";
+import BatteryPacks from "./BatteryPacks";
+import BatteryFeatures from "./BatteryFeatures";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="min-h-screen bg-white text-black">
+      {/* Navbar */}
+      <header className="fixed top-0 w-full bg-white bg-opacity-80 z-20 shadow-md">
+        <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
+          <div className="flex items-center space-x-2">
+            <Zap className="w-6 h-6 text-orange-500" />
+            <div className="text-2xl font-bold">
+              <span className="text-orange-500">JARO</span>
+              <span className="text-black">LITIO</span>
+            </div>
+          </div>
+          <ul className="flex space-x-6">
+            <li>
+              <a href="#" className="text-black hover:text-orange-500">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="/products" className="text-black hover:text-orange-500">
+                Productos
+              </a>
+            </li>
+            <li>
+              <a href="#" className="text-black hover:text-orange-500">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative h-[70vh] flex items-center justify-center pt-20">
+        <div
+          className="absolute inset-0 bg-cover bg-center slideshow"
+          style={{
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1593351415075-3bac9f45c877?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Ym9hdHxlbnwwfHwwfHx8MA%3D%3D)",
+          }}></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center slideshow-delay"
+          style={{
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1670326457662-d981e6788945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          }}></div>
+        <div className="absolute inset-0"></div>
+        <div className="relative z-10 text-center">
+          <div className="bg-white/50 backdrop-blur-md p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+            {" "}
+            <h1 className="text-5xl font-bold mb-4">
+              <span className="text-black">Baterías de Litio</span>{" "}
+              <span className="text-orange-500">de Última Generación</span>
+            </h1>
+            <p className="text-xl mb-8 text-gray-700">
+              <span className="text-black">
+                Distribuidor oficial de JAROCELLS en España. Experimente la
+                máxima libertad con las baterías LiFePO₄ más ligeras y potentes
+                para su barco o autocaravana.
+              </span>
+            </p>
+            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg mr-4">
+              Ver Productos
+            </button>
+            <button className="bg-transparent border-2 border-orange-500 text-orange-500 font-bold py-3 px-6 rounded-lg hover:bg-orange-500 hover:text-white">
+              Contactar
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Features Section */}
+      <section className="py-16 px-8 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+          <div className="flex flex-col items-center">
+            <FiClock className="w-12 h-12 text-orange-500 mb-4" />
+            <h3 className="text-xl  text-orange-500 font-semibold mb-2">
+              Entregas Rápidas
+            </h3>
+            <p className="text-gray-600">
+              Entrega rápida y eficiente a toda España.
+            </p>
+          </div>
+          <div className="flex flex-col items-center">
+            <FiShoppingCart className="w-12 h-12 text-orange-500 mb-4" />
+            <h3 className="text-xl font-semibold  text-orange-500 mb-2">
+              Pagos Seguros
+            </h3>
+            <p className="text-gray-600">Pagos seguros con encriptación SSL.</p>
+          </div>
+          <div className="flex flex-col items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-12 h-12 text-orange-500 mb-4">
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+              />
+            </svg>
+            <h3 className="text-xl font-semibold  text-orange-500 mb-2">
+              5 Años de Garantía
+            </h3>
+            <p className="text-gray-600">
+              Garantía de 5 años en todos nuestros productos.
+            </p>
+          </div>
         </div>
-      </main>
+      </section>
+      {/* Battery Packs Section */}
+      <BatteryPacks />
+      {/* Battery Features Section */}
+      <BatteryFeatures />
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

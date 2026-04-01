@@ -12,6 +12,25 @@
   --font-mono: var(--font-geist-mono);
 }
 
+@keyframes fade {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.slideshow {
+  animation: fade 8s infinite;
+}
+
+.slideshow-delay {
+  animation: fade 8s infinite 4s;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
