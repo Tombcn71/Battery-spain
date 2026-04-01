@@ -1,8 +1,6 @@
 import { FiClock, FiShoppingCart } from "react-icons/fi";
-import { Zap } from "lucide-react";
 import BatteryPacks from "./BatteryPacks";
 import BatteryFeatures from "./BatteryFeatures";
-import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -10,13 +8,7 @@ export default function Home() {
       {/* Navbar */}
       <header className="fixed top-0 w-full bg-white bg-opacity-80 z-20 shadow-md">
         <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
-          <div className="flex items-center space-x-2">
-            <Zap className="w-6 h-6 text-orange-500" />
-            <div className="text-2xl font-bold">
-              <span className="text-orange-500">JARO</span>
-              <span className="text-black">LITIO</span>
-            </div>
-          </div>
+          <img src="/logo.svg" alt="JAROCELLS Logo" className="h-12 w-auto" />
           <ul className="flex space-x-6">
             <li>
               <a href="#" className="text-black hover:text-orange-500">
@@ -49,11 +41,11 @@ export default function Home() {
           className="absolute inset-0 bg-cover bg-center slideshow-delay"
           style={{
             backgroundImage:
-              "url(https://images.unsplash.com/photo-1670326457662-d981e6788945?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+              "url(https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)",
           }}></div>
         <div className="absolute inset-0"></div>
         <div className="relative z-10 text-center">
-          <div className="bg-white/5https://github.com/Tombcn71/Battery-spain backdrop-blur-md p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+          <div className="bg-white/50 backdrop-blur-md p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
             {" "}
             <h1 className="text-5xl font-bold mb-4">
               <span className="text-black">Baterías de Litio</span>{" "}
@@ -122,9 +114,6 @@ export default function Home() {
       <BatteryPacks />
       {/* Battery Features Section */}
       <BatteryFeatures />
-
-      {/* Footer */}
-      <Footer />
     </div>
   );
 }
