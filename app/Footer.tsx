@@ -15,8 +15,9 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-gray-300 mb-4">
-              Distribuidor oficial de JAROCELLS en España. Especialistas en baterías de litio
-              de última generación para barcos, caravanas y aplicaciones industriales.
+              Distribuidor oficial de JAROCELLS en España. Especialistas en
+              baterías de litio de última generación para barcos, caravanas y
+              aplicaciones industriales.
             </p>
             <p className="text-gray-400 text-sm">
               © 2024 JAROLITIO. Todos los derechos reservados.
@@ -25,18 +26,46 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-orange-500">Enlaces Rápidos</h3>
+            <h3 className="text-lg font-semibold mb-4 text-orange-500">
+              Enlaces Rápidos
+            </h3>
             <ul className="space-y-2">
-              <li><a href="/" className="text-gray-300 hover:text-orange-500 transition-colors">Inicio</a></li>
-              <li><a href="/products" className="text-gray-300 hover:text-orange-500 transition-colors">Productos</a></li>
-              <li><a href="/about" className="text-gray-300 hover:text-orange-500 transition-colors">Sobre Nosotros</a></li>
-              <li><a href="/contact" className="text-gray-300 hover:text-orange-500 transition-colors">Contacto</a></li>
+              <li>
+                <a
+                  href="/"
+                  className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Inicio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/products"
+                  className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Productos
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/about"
+                  className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Sobre Nosotros
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/contact"
+                  className="text-gray-300 hover:text-orange-500 transition-colors">
+                  Contacto
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-orange-500">Contacto</h3>
+            <h3 className="text-lg font-semibold mb-4 text-orange-500">
+              Contacto
+            </h3>
             <div className="space-y-2 text-gray-300">
               <p>📧 info@jarolitio.es</p>
               <p>📞 +34 900 123 456</p>
