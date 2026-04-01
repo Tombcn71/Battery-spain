@@ -53,7 +53,7 @@ export default function Home() {
           }}></div>
         <div className="absolute inset-0"></div>
         <div className="relative z-10 text-center">
-          <div className="bg-white/50 backdrop-blur-md p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+          <div className="bg-white/5https://github.com/Tombcn71/Battery-spain backdrop-blur-md p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
             {" "}
             <h1 className="text-5xl font-bold mb-4">
               <span className="text-black">Baterías de Litio</span>{" "}
