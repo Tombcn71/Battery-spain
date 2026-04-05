@@ -1,4 +1,5 @@
 import { FiClock, FiShoppingCart } from "react-icons/fi";
+import { Zap } from "lucide-react";
 import BatteryPacks from "./BatteryPacks";
 import BatteryFeatures from "./BatteryFeatures";
 import Footer from "./Footer";
@@ -9,7 +10,15 @@ export default function Home() {
       {/* Navbar */}
       <header className="fixed top-0 w-full bg-white bg-opacity-80 z-20 shadow-md">
         <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
-          <img src="/logo.svg" alt="JAROCELLS Logo" className="h-12 w-auto" />
+          <a href="/" className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+              <Zap className="w-6 h-6 text-white" />
+            </div>
+            <div className="text-2xl font-bold tracking-tight">
+              <span className="text-orange-500">JARO</span>
+              <span className="text-black">LITIO</span>
+            </div>
+          </a>
           <ul className="flex space-x-6">
             <li>
               <a href="#" className="text-black hover:text-orange-500">
