@@ -51,9 +51,9 @@ export default function Home() {
 
 
       {/* Battery Packs Section */}
-      <BatteryPacks />
+    
       {/* Battery Features Section */}
-      <BatteryFeatures />
+      <BatteryFeatures />  <BatteryPacks />
       {/* Footer */}
       <Footer />
     </div>
