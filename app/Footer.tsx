@@ -48,7 +48,7 @@ export default function Footer() {
                 <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
               <div className="text-xl sm:text-2xl font-bold tracking-tight">
-                <span className="text-orange-500">JARO</span>
+                <span className="text-orange-500">ENERGIA</span>
                 <span className="text-white">LITIO</span>
               </div>
             </div>
