@@ -1,46 +1,18 @@
 import { FiClock, FiShoppingCart } from "react-icons/fi";
-import { Zap } from "lucide-react";
 import BatteryPacks from "./BatteryPacks";
 import BatteryFeatures from "./BatteryFeatures";
 import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white text-black">
       {/* Navbar */}
-      <header className="fixed top-0 w-full bg-white bg-opacity-80 z-20 shadow-md">
-        <nav className="flex justify-between items-center p-4 max-w-7xl mx-auto">
-          <a href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-              <Zap className="w-6 h-6 text-white" />
-            </div>
-            <div className="text-2xl font-bold tracking-tight">
-              <span className="text-orange-500">JARO</span>
-              <span className="text-black">LITIO</span>
-            </div>
-          </a>
-          <ul className="flex space-x-6">
-            <li>
-              <a href="#" className="text-black hover:text-orange-500">
-                Inicio
-              </a>
-            </li>
-            <li>
-              <a href="/products" className="text-black hover:text-orange-500">
-                Productos
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-black hover:text-orange-500">
-                Contacto
-              </a>
-            </li>
-          </ul>
-        </nav>
-      </header>
+      <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center pt-20">
+      <section className="relative min-h-[100svh] md:min-h-[80vh] flex items-center justify-center pt-20 pb-8">
+        {/* Background Images */}
         <div
           className="absolute inset-0 bg-cover bg-center slideshow"
           style={{
@@ -53,27 +25,29 @@ export default function Home() {
             backgroundImage:
               "url(https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80)",
           }}></div>
-        <div className="absolute inset-0"></div>
-        <div className="relative z-10 text-center">
-          <div className="bg-white/50 backdrop-blur-md p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
-            {" "}
-            <h1 className="text-5xl font-bold mb-4">
+        {/* Overlay for better text readability on mobile */}
+        <div className="absolute inset-0 bg-black/20 md:bg-transparent"></div>
+        
+        {/* Hero Content */}
+        <div className="relative z-10 text-center px-4 w-full">
+          <div className="bg-white/70 md:bg-white/50 backdrop-blur-md p-6 md:p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-balance">
               <span className="text-black">Baterías de Litio</span>{" "}
               <span className="text-orange-500">de Última Generación</span>
             </h1>
-            <p className="text-xl mb-8 text-gray-700">
-              <span className="text-black">
-                Distribuidor oficial de JAROCELLS en España. Experimente la
-                máxima libertad con las baterías LiFePO₄ más ligeras y potentes
-                para su barco o autocaravana.
-              </span>
+            <p className="text-base sm:text-lg md:text-xl mb-6 md:mb-8 text-gray-700 text-pretty">
+              Distribuidor oficial de JAROCELLS en España. Experimente la
+              máxima libertad con las baterías LiFePO₄ más ligeras y potentes
+              para su barco o autocaravana.
             </p>
-            <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg mr-4">
-              Ver Productos
-            </button>
-            <button className="bg-transparent border-2 border-orange-500 text-orange-500 font-bold py-3 px-6 rounded-lg hover:bg-orange-500 hover:text-white">
-              Contactar
-            </button>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <button className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors">
+                Ver Productos
+              </button>
+              <button className="bg-transparent border-2 border-orange-500 text-orange-500 font-bold py-3 px-6 rounded-lg hover:bg-orange-500 hover:text-white transition-colors">
+                Contactar
+              </button>
+            </div>
           </div>
         </div>
       </section>
