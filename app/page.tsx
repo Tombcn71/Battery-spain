@@ -1,6 +1,7 @@
 import { FiClock, FiShoppingCart } from "react-icons/fi";
 import BatteryPacks from "./BatteryPacks";
 import BatteryFeatures from "./BatteryFeatures";
+import Footer from "./Footer";
 
 export default function Home() {
   return (
@@ -114,6 +115,8 @@ export default function Home() {
       <BatteryPacks />
       {/* Battery Features Section */}
       <BatteryFeatures />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
