@@ -26,7 +26,7 @@ export default function DistribuidorOficial() {
             <img
               src="/BT100-36_web3.jpg"
               alt="JAROCELLS JARO-BT100.36 38.4V 100Ah"
-              className="relative z-10 w-full max-w-md rounded-2xl object-contain drop-shadow-xl"
+              className="relative z-10 w-full max-w-md rounded-2xl object-contain" // drop-shadow-xl is verwijderd
             />
           </div>
 
