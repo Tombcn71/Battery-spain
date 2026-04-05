@@ -8,7 +8,7 @@ export default function DistribuidorOficial() {
             Distribuidor Oficial en España
           </span>
           <h2 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-            Somos el único distribuidor oficial de{" "}
+            Somos el distribuidor oficial de{" "}
             <span className="text-orange-500">JAROCELLS</span> en España
           </h2>
           <p className="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto">
