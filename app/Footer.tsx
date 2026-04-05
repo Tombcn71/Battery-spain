@@ -39,20 +39,20 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
           {/* Company Info */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              <div className="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center">
-                <Zap className="w-6 h-6 text-white" />
+          <div className="sm:col-span-2 lg:col-span-1">
+            <div className="flex items-center gap-2 mb-4 sm:mb-6">
+              <div className="w-9 h-9 sm:w-10 sm:h-10 bg-orange-500 rounded-lg flex items-center justify-center">
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div className="text-2xl font-bold tracking-tight">
+              <div className="text-xl sm:text-2xl font-bold tracking-tight">
                 <span className="text-orange-500">JARO</span>
                 <span className="text-white">LITIO</span>
               </div>
             </div>
-            <p className="text-slate-400 mb-6 leading-relaxed">
+            <p className="text-sm sm:text-base text-slate-400 mb-4 sm:mb-6 leading-relaxed">
               Distribuidor oficial de JAROCELLS en España. Especialistas en
               baterías de litio LiFePO₄ de última generación para náutica,
               caravanas y aplicaciones industriales.
@@ -100,10 +100,10 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">
+            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-white">
               Productos
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <Link
                   href="/products"
@@ -141,10 +141,10 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">
+            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-white">
               Enlaces
             </h3>
-            <ul className="space-y-3">
+            <ul className="space-y-2 sm:space-y-3">
               <li>
                 <Link
                   href="/"
@@ -182,10 +182,10 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 text-white">
+            <h3 className="text-base sm:text-lg font-semibold mb-4 sm:mb-6 text-white">
               Contacto
             </h3>
-            <ul className="space-y-4">
+            <ul className="space-y-3 sm:space-y-4">
               <li className="flex items-start gap-3">
                 <Mail className="w-5 h-5 text-orange-500 mt-0.5 shrink-0" />
                 <a
@@ -217,12 +217,12 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-slate-800">
-        <div className="max-w-7xl mx-auto px-6 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-slate-500 text-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-4 sm:py-6">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+            <p className="text-slate-500 text-xs sm:text-sm text-center">
               &copy; {currentYear} JAROLITIO. Todos los derechos reservados.
             </p>
-            <div className="flex gap-6 text-sm">
+            <div className="flex gap-4 sm:gap-6 text-xs sm:text-sm">
               <Link
                 href="/privacy"
                 className="text-slate-500 hover:text-orange-500 transition-colors"

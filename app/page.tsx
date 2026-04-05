@@ -53,42 +53,42 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-16 px-8 bg-white">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div className="flex flex-col items-center">
-            <FiClock className="w-12 h-12 text-orange-500 mb-4" />
-            <h3 className="text-xl  text-orange-500 font-semibold mb-2">
+      <section className="py-10 sm:py-16 px-4 sm:px-8 bg-white">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
+          <div className="flex flex-col items-center p-4">
+            <FiClock className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500 mb-3 sm:mb-4" />
+            <h3 className="text-lg sm:text-xl text-orange-500 font-semibold mb-2">
               Entregas Rápidas
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600">
               Entrega rápida y eficiente a toda España.
             </p>
           </div>
-          <div className="flex flex-col items-center">
-            <FiShoppingCart className="w-12 h-12 text-orange-500 mb-4" />
-            <h3 className="text-xl font-semibold  text-orange-500 mb-2">
+          <div className="flex flex-col items-center p-4">
+            <FiShoppingCart className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500 mb-3 sm:mb-4" />
+            <h3 className="text-lg sm:text-xl font-semibold text-orange-500 mb-2">
               Pagos Seguros
             </h3>
-            <p className="text-gray-600">Pagos seguros con encriptación SSL.</p>
+            <p className="text-sm sm:text-base text-gray-600">Pagos seguros con encriptación SSL.</p>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center p-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="w-12 h-12 text-orange-500 mb-4">
+              className="w-10 h-10 sm:w-12 sm:h-12 text-orange-500 mb-3 sm:mb-4">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
               />
             </svg>
-            <h3 className="text-xl font-semibold  text-orange-500 mb-2">
+            <h3 className="text-lg sm:text-xl font-semibold text-orange-500 mb-2">
               5 Años de Garantía
             </h3>
-            <p className="text-gray-600">
+            <p className="text-sm sm:text-base text-gray-600">
               Garantía de 5 años en todos nuestros productos.
             </p>
           </div>
