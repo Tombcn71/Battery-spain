@@ -5,11 +5,30 @@ import {
   BatteryMedium,
   ShieldCheck,
   Package,
+  Battery,
 } from "lucide-react";
 
 export default function BatteryFeatures() {
   return (
     <section className="py-16 px-8 bg-white/80 backdrop-blur-md">
+      {/* Why Lithium Batteries Header */}
+      <div className="max-w-4xl mx-auto text-center mb-12">
+        <div className="flex items-center justify-center gap-3 mb-4">
+          <Battery className="w-10 h-10 text-orange-500" />
+          <h2 className="text-3xl md:text-4xl font-bold text-balance">
+            <span className="text-black">¿Por qué elegir </span>
+            <span className="text-orange-500">baterías de litio</span>
+            <span className="text-black">?</span>
+          </h2>
+        </div>
+        <p className="text-lg text-gray-600 leading-relaxed text-pretty">
+          Las baterías de litio LiFePO₄ representan la última evolución en almacenamiento de energía. 
+          Son más ligeras, duraderas y eficientes que las baterías de plomo tradicionales, 
+          ofreciendo un rendimiento superior para su barco, caravana o instalación solar.
+        </p>
+      </div>
+
+      {/* Features Grid */}
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
         <div className="flex flex-col items-center p-6 bg-white/50 rounded-lg shadow-lg">
           <Timer className="w-16 h-16 text-orange-500 mb-4" />
