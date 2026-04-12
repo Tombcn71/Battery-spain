@@ -1,6 +1,7 @@
 import { buildConfig } from 'payload'
 import { postgresAdapter } from '@payloadcms/db-postgres'
 import { lexicalEditor } from '@payloadcms/richtext-lexical'
+import { vercelBlobStorage } from '@payloadcms/storage-vercel-blob'
 import Products from './payload/collections/Products'
 import Categories from './payload/collections/Categories'
 import Users from './payload/collections/Users'
@@ -28,4 +29,13 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URI || '',
     },
   }),
+  plugins: [
+    vercelBlobStorage({
+      enabled: true,
+      collections: {
+        media: true,
+      },
+      token: process.env.BLOB_READ_WRITE_TOKEN || '',
+    }),
+  ],
 })
