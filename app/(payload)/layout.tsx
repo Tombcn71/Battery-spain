@@ -1,18 +1,20 @@
+/* THIS FILE WAS GENERATED AUTOMATICALLY BY PAYLOAD. */
+/* DO NOT MODIFY IT BECAUSE IT COULD BE REWRITTEN AT ANY TIME. */
+import config from "@payload-config";
+import { RootLayout } from "@payloadcms/next/layouts";
+import React from "react";
+import { importMap } from "./admin/importMap.js";
 import "@payloadcms/next/css";
+import "./custom.scss";
 
-export const metadata = {
-  title: "Battery Spain - Admin",
-  description: "Admin panel for Battery Spain",
+type Args = {
+  children: React.ReactNode;
 };
 
-export default function PayloadLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="nl">
-      <body>{children}</body>
-    </html>
-  );
-}
+const Layout = ({ children }: Args) => (
+  <RootLayout config={config} importMap={importMap}>
+    {children}
+  </RootLayout>
+);
+
+export default Layout;
