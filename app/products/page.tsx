@@ -2,12 +2,16 @@ import { getPayload } from 'payload'
 import config from '@payload-config'
 import Link from 'next/link'
 
+export const revalidate = 0
+
 export default async function Products() {
   const payload = await getPayload({ config })
   const { docs: products } = await payload.find({
     collection: 'products',
     depth: 2,
   })
+
+  const serverUrl = process.env.NEXT_PUBLIC_SERVER_URL || ''
 
   return (
     <div className="min-h-screen bg-white text-black py-16 px-8">
@@ -20,7 +24,7 @@ export default async function Products() {
             <div className="bg-gray-100 p-6 rounded-lg hover:shadow-lg transition cursor-pointer">
               {product.image?.url && (
                 <img
-                  src={product.image.url}
+                  src={product.image.url.startsWith('http') ? product.image.url : `${serverUrl}${product.image.url}`}
                   alt={product.image.alt || product.name}
                   className="w-full h-48 object-cover rounded mb-4"
                 />
