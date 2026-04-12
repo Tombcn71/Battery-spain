@@ -15,11 +15,13 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   const product = docs[0] as any
   if (!product) return notFound()
 
+  const serverUrl = process.env.NEXT_PUBLIC_SERVER_URL || ''
+
   return (
     <div className="min-h-screen bg-white text-black py-16 px-8 max-w-4xl mx-auto">
       {product.image?.url && (
         <img
-          src={product.image.url}
+          src={`${serverUrl}${product.image.url}`}
           alt={product.image.alt || product.name}
           className="w-full h-96 object-cover rounded-lg mb-8"
         />
